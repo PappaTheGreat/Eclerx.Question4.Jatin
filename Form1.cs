@@ -32,7 +32,7 @@ namespace Eclerx.Question4.Jatin
         {
             using (con = new SqlConnection(ConfigurationManager.ConnectionStrings["HRCon"].ConnectionString))
             {
-                using (adapter = new SqlDataAdapter("usp_AddNewEmployee", con))
+                using (adapter = new SqlDataAdapter("usp_AddNewEmployee",  con))
                 {
                     SqlCommandBuilder builder = new SqlCommandBuilder(adapter);//This is will generate Insert
                     ds = new DataSet();
