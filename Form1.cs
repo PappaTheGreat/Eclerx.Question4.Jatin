@@ -30,20 +30,20 @@ namespace Eclerx.Question4.Jatin
 
         private void BtnAddNew_Click(object sender, EventArgs e)
         {
-            using (con = new SqlConnection(ConfigurationManager.ConnectionStrings["HRConn"].ConnectionString))
+            using (con = new SqlConnection(ConfigurationManager.ConnectionStrings["HRCon"].ConnectionString))
             {
                 using (adapter = new SqlDataAdapter("usp_AddNewEmployee", con))
                 {
                     SqlCommandBuilder builder = new SqlCommandBuilder(adapter);//This is will generate Insert
                     ds = new DataSet();
-                    adapter.Fill(ds, "Employee");
+                    adapter.Fill(ds,"Employee");
                     //Create new row in the dataset
                     DataRow dr = ds.Tables["Employee"].NewRow();
-                    dr["EmployeeId"] = txtEmpNo.Text;
-                    dr["EmployeeName"] = txtEmpName.Text;
-                    dr["EmployeeSalary"] = txtEmpSalary.Text;
-                    dr["EmployeeType"] = RadioPayroll.Text.Contains("P");
-                    dr["EmployeeType"] = RadioConsultant.Text.Contains("C");
+                    dr["@EmployeeNo"] = txtEmpNo.Text;
+                    dr["@EmployeeName"] = txtEmpName.Text;
+                    dr["@EmployeeSalary"] = txtEmpSalary.Text;
+                    dr["@EmployeeType"] = RadioPayroll.Text.Contains("P");
+                    dr["@EmployeeType"] = RadioConsultant.Text.Contains("C");
                     //Add data row to dataset
                     ds.Tables["Employee"].Rows.Add(dr);
                     //Updating Dataset to Database

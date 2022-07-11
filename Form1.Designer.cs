@@ -39,8 +39,8 @@ namespace Eclerx.Question4.Jatin
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.txtEmpSalary = new System.Windows.Forms.TextBox();
             this.GPEmpType = new System.Windows.Forms.GroupBox();
-            this.RadioPayroll = new System.Windows.Forms.RadioButton();
             this.RadioConsultant = new System.Windows.Forms.RadioButton();
+            this.RadioPayroll = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GPEmpType.SuspendLayout();
             this.SuspendLayout();
@@ -134,17 +134,6 @@ namespace Eclerx.Question4.Jatin
             this.GPEmpType.TabStop = false;
             this.GPEmpType.Text = "Employee Type";
             // 
-            // RadioPayroll
-            // 
-            this.RadioPayroll.AutoSize = true;
-            this.RadioPayroll.Location = new System.Drawing.Point(6, 44);
-            this.RadioPayroll.Name = "RadioPayroll";
-            this.RadioPayroll.Size = new System.Drawing.Size(80, 24);
-            this.RadioPayroll.TabIndex = 0;
-            this.RadioPayroll.TabStop = true;
-            this.RadioPayroll.Text = "Payroll";
-            this.RadioPayroll.UseVisualStyleBackColor = true;
-            // 
             // RadioConsultant
             // 
             this.RadioConsultant.AutoSize = true;
@@ -155,6 +144,17 @@ namespace Eclerx.Question4.Jatin
             this.RadioConsultant.TabStop = true;
             this.RadioConsultant.Text = "Consultant";
             this.RadioConsultant.UseVisualStyleBackColor = true;
+            // 
+            // RadioPayroll
+            // 
+            this.RadioPayroll.AutoSize = true;
+            this.RadioPayroll.Location = new System.Drawing.Point(6, 44);
+            this.RadioPayroll.Name = "RadioPayroll";
+            this.RadioPayroll.Size = new System.Drawing.Size(80, 24);
+            this.RadioPayroll.TabIndex = 0;
+            this.RadioPayroll.TabStop = true;
+            this.RadioPayroll.Text = "Payroll";
+            this.RadioPayroll.UseVisualStyleBackColor = true;
             // 
             // lblEmployeeDetails
             // 
@@ -171,7 +171,6 @@ namespace Eclerx.Question4.Jatin
             this.Controls.Add(this.lblEmpSal);
             this.Controls.Add(this.lblEmpName);
             this.Controls.Add(this.lblEmpNo);
-            this.Enabled = false;
             this.Name = "lblEmployeeDetails";
             this.Text = "Employee Details";
             this.Load += new System.EventHandler(this.lblEmployeeDetails_Load);
